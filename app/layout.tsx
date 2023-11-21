@@ -20,5 +20,6 @@ export default function RootLayout({ children }:Props ) {
       <Navbar/>
       <body className={inter.className}>{children}</body>
     </div>
+
   )
 }
