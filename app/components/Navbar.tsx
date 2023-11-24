@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-gray-400 p-4 md:p-0 relativez-50">
+        <div className="navbar bg-gray-400 p-4 md:p-0 relative z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
