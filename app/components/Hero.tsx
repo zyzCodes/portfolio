@@ -15,9 +15,9 @@ const Hero = () => {
             <h1 className="text-3xl font-bold text-gray-200">Hi there, I&apos;m Diego Arana</h1>
           </div>
           <p className="py-2 text-white">
-            I&apos;m a third year computer science student at the University of Alberta
+            I&apos;m a third year computer science student at the University of Alberta.
           </p>
-          <p className="py-2 text-white">I like solving problems and making ideas come to life!</p>
+          <p className="pb-5 text-white">I like making ideas come to life!</p>
           <div className="grid grid-cols-2 gap-2">
             <div className="grid-col">
               <Link href="portfolio/">
