@@ -5,7 +5,7 @@ const Projects = () => {
     const imageWidth = 1000
     const imageHeight = 1000
     return(
-        <div>
+        <div className='pb-24'>
             {/* Cards container */}
             <div className="flex flex-wrap justify-center gap-8">
                 {/* Card 1 */}
@@ -44,7 +44,6 @@ const Projects = () => {
                 </div>
 
             </div>
-            
         </div>
     )
 
