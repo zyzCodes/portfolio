@@ -1,7 +1,5 @@
-import Hero from '@/components/Hero';
-import Skills from '@/components/Skills';
-import Image from 'next/image';
-import mountains from '../public/mountains.jpg';
+import Hero from '@/app/components/Hero';
+import Skills from '@/app/components/Skills';
 
 export default function Home() {
   return (
