@@ -11,8 +11,8 @@ const Euro = () => {
                     </div>
                 </div>
                 <p className="text-sm md:text-base pb-1">
-                    • Developed web applications and dashboards that monitored the company’s production and machines by using Python, MySQL, JavaScript, HTML, CSS, Git, and Bitbucket. These dashboards and web applications are being displayed
-                    all around the factory, providing valuable information to the company and the company’s
+                    • Developed web applications and dashboards that monitored the company&apos;s production and machines by using Python, MySQL, JavaScript, HTML, CSS, Git, and Bitbucket. These dashboards and web applications are being displayed
+                    all around the factory, providing valuable information to the company and the company&apos;s
                     employees.
                 </p>
                 <p className="text-sm md:text-base pb-1">• Contributed to web applications built with C#, .NET, and JavaScript</p>
