@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-gray-400 p-4 md:p-0 relative z-50">
+        <div className="navbar bg-gray-400 p-4 md:p-0 relativez-50">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,7 +21,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 </div>
-                <a><Link href="/" className='btn btn-ghost normal-case text-xl'>Diego Arana</Link></a>
+                <a><Link href="/" className='pl-4 font-extrabold active normal-case text-xl'>Diego Arana</Link></a>
             </div>
             <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-vertical lg:menu-horizontal rounded-box">
@@ -41,7 +41,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <a>
-                    <Link className='btn btn-primary' href="https://diegoarana-mysite-bucket.s3.amazonaws.com/media/Resume_DiegoArana_August23.pdf">
+                    <Link className='pr-4 md:pr-2 font-bold' href="https://diegoarana-mysite-bucket.s3.amazonaws.com/media/Resume_DiegoArana_August23.pdf">
                         Download CV
                     </Link>
                 </a>

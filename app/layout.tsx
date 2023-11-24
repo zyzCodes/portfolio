@@ -17,13 +17,13 @@ interface Props {
 
 export default function RootLayout({ children }:Props ) {
   return (
-    <div data-theme="light">
-        <Navbar />
-        <body className={inter.className}>{children}</body>
-        <Footer/>
-
-
-    </div>
+    <>
+      <div data-theme="light">
+          <Navbar />
+          <body className={inter.className}>{children}</body>
+          <Footer/>
+      </div>
+    </>
 
   )
 }
