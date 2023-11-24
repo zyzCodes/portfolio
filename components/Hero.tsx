@@ -10,12 +10,12 @@ const Hero = () => {
       </div>
       <div className="hero-content text-center bg-gradient-to-b from-blue-800 via-blue-800 to-purple-800 shadow-xl rounded-lg p-8 md:p-12 relative z-10 max-w-screen-xl mx-auto">
         <div className="flex flex-col items-center text-center">
-          <img src="/profile.png" alt="Placeholder Image" className="mx-auto my-4 rounded-full" width="300" height="300" />
+          <Image src="/profile.png" alt="Placeholder Image" className="mx-auto my-4 rounded-full" width="300" height="300" />
           <div className="typewriter max-w-fit">
-            <h1 className="text-3xl font-bold text-gray-200">Hi there, I'm Diego Arana</h1>
+            <h1 className="text-3xl font-bold text-gray-200">Hi there, I&apos;m Diego Arana</h1>
           </div>
           <p className="py-2 text-white">
-            I'm a third year computer science student at the University of Alberta
+            I&apos;m a third year computer science student at the University of Alberta
           </p>
           <p className="py-2 text-white">I like solving problems and making ideas come to life!</p>
           <div className="grid grid-cols-2 gap-2">
