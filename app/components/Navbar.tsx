@@ -10,13 +10,16 @@ const Navbar = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52">
-                    <li className="nav-link">
+                    <li className="nav-link text-black">
+                        <Link href="/">About</Link>
+                    </li>
+                    <li className="nav-link text-black">
                         <Link href="#contact">Contact</Link>
                     </li>
-                    <li className="nav-link">
+                    <li className="nav-link text-black">
                         <Link href="portfolio/">Portfolio</Link>
                     </li>
-                    <li className="nav-link">
+                    <li className="nav-link text-black">
                         <Link href="/#skills">Skills</Link>
                     </li>
                 </ul>
