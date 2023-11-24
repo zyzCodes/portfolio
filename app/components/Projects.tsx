@@ -19,7 +19,8 @@ const Projects = () => {
                     </div>
                     <div className="card-body">
                         <h2 className="card-title text-sky-400">Euro Graph</h2>
-                        <p>Dashboard application that queries data from MySQL database and displays the data in graphs</p>
+                        <p className='text-black'>Dashboard application that queries data from MySQL database and displays the data in Dashboard.</p>
+                        <p className='text-black'>Built with Python, Plotly, and MySQL</p>
                     </div>
                 </div>
 
@@ -35,7 +36,8 @@ const Projects = () => {
                     </div>
                     <div className="card-body">
                         <h2 className="card-title text-sky-400">SubManager</h2>
-                        <p>Subscription Manager web application that reminds users about their upcoming bill subsciriptions</p>
+                        <p className='text-black' >Subscription Manager web application that reminds users about their upcoming bill subsciriptions.</p>
+                        <p className='text-black' >Built with React, MySQL, and Express.</p>
                     </div>
                 </div>
 
