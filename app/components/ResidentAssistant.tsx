@@ -1,4 +1,6 @@
 
+
+// NOT USED NOT USED NOT USED NOT USED NOT USED NOT USED NOT USED NOT USED 
 const ResidentAssistant = () => {
     return (
         <div className="flex justify-center pb-11">
@@ -8,7 +10,7 @@ const ResidentAssistant = () => {
                         <h2 className="text-xl md:text-1xl font-bold">University of Alberta | Resident Assistant</h2>
                     </div>
                     <div className="mt-2 md:mt-0 md:text-right">
-                        <p>Edmonton, Canada | 08/2023 - present</p>
+                        <p>Edmonton, Canada | Aug 2023 - present</p>
                     </div>
                 </div>
                 <p className="text-sm md:text-base pb-1">
@@ -16,6 +18,12 @@ const ResidentAssistant = () => {
                     student leader to cultivate inclusive and supportive atmosphere for
                     fellow residents.
                 </p>
+                
+                <p className="text-sm md:text-base pb-1">Supported a community of 3600+ university students trough leadership, 
+                coordination, and event planning,
+                fostering academic achievement, career success, diversity, and inclusivity.
+                </p>
+
                 <p className="text-sm md:text-base">
                     <span className="font-bold">Skills Acquired: </span>
                     leadership, communication, problem-solving, networking, and time management.

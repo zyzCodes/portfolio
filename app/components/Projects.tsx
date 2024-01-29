@@ -9,11 +9,12 @@ const Projects = () => {
             {/* Cards container */}
             <div className="flex flex-wrap justify-center gap-8">
                 {/* Card 1 */}
-                <div className="card card-compact w-[400px] h-[350px] bg-base-100 shadow-xl relative">
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative">
                     <div className='image-container'>
                         <Image 
                         src="/FailureGraph.png" 
-                        alt="Shoes" width={imageWidth} 
+                        alt="Shoes"
+                        width={imageWidth} 
                         height={imageHeight} 
                         className='rounded-t-md'/>
                     </div>
@@ -25,7 +26,7 @@ const Projects = () => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="card card-compact w-[400px] h-[350px] bg-base-100 shadow-xl">
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl">
                     <div className='image-container'>
                         <Image 
                         src="/SubManager.png" 
@@ -38,6 +39,23 @@ const Projects = () => {
                         <h2 className="card-title text-sky-400">SubManager</h2>
                         <p className='text-black' >Subscription Manager web application that reminds users about their upcoming bill subsciriptions.</p>
                         <p className='text-black' >Built with React, MySQL, and Express.</p>
+                    </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl">
+                    <div className='image-container'>
+                        <Image 
+                        src="/cprogram.png" 
+                        alt="Shoes" 
+                        width={imageWidth} 
+                        height={imageHeight}
+                        className='rounded-t-md'/>
+                    </div>
+                    <div className="card-body">
+                        <h2 className="card-title text-sky-400">Algorithm Comparison in C</h2>
+                        <p className='text-black' > Executed performance testing by running 100,000 iterations of data insertion and retrieval to provide empirical
+                            data on the runtime efficiency of each data structure.</p>
                     </div>
                 </div>
 
