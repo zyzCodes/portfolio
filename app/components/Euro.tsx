@@ -17,7 +17,7 @@ const Euro = () => {
                         employees.
                     </p>
                     <p className="text-sm md:text-base pb-1">• Contributed to web applications built with C#, .NET, and JavaScript</p>
-                    <p className="text-sm md:text-base pb-1">• Engineered big data analysis tools that automated a previously time-consuming task for the company's
+                    <p className="text-sm md:text-base pb-1">• Engineered big data analysis tools that automated a previously time-consuming task for the company&apos;s
                     management team, resulting in significant time savings. This transformation streamlined the process into a
                     practical and instantaneous solution.
                     </p>
