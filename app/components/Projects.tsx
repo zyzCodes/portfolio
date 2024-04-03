@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const Projects = () => {
@@ -9,7 +10,7 @@ const Projects = () => {
             {/* Cards container */}
             <div className="flex flex-wrap justify-center gap-8">
                 {/* Card 1 */}
-                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative">
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative hover:translate-y-1">
                     <div className='image-container'>
                         <Image 
                         src="/FailureGraph.png" 
@@ -26,24 +27,26 @@ const Projects = () => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl">
-                    <div className='image-container'>
-                        <Image 
-                        src="/SubManager.png" 
-                        alt="Shoes" 
-                        width={imageWidth} 
-                        height={imageHeight}
-                        className='rounded-t-md'/>
+                <Link href="https://www.esix.ca/" target="_blank">
+                    <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl hover:translate-y-1">
+                        <div className='image-container'>
+                            <Image 
+                            src="/SubManager.png" 
+                            alt="Shoes" 
+                            width={imageWidth} 
+                            height={imageHeight}
+                            className='rounded-t-md'/>
+                        </div>
+                        <div className="card-body">
+                            <h2 className="card-title text-sky-400">SubManager</h2>
+                            <p className='text-black' >Subscription Manager web application that reminds users about their upcoming bill subsciriptions.</p>
+                            <p className='text-black' >Built with React, MySQL, and Express.</p>
+                        </div>
                     </div>
-                    <div className="card-body">
-                        <h2 className="card-title text-sky-400">SubManager</h2>
-                        <p className='text-black' >Subscription Manager web application that reminds users about their upcoming bill subsciriptions.</p>
-                        <p className='text-black' >Built with React, MySQL, and Express.</p>
-                    </div>
-                </div>
+                </Link>
 
                 {/* Card 3 */}
-                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl">
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl hover:translate-y-1">
                     <div className='image-container'>
                         <Image 
                         src="/cprogram.png" 
