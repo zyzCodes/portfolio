@@ -44,10 +44,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <Link className='pr-4 md:pr-2 font-bold' href="https://diegoarana-mysite-bucket.s3.amazonaws.com/media/Resume_DiegoArana_August23.pdf">
-                    Download CV
                 </Link>
             </div>
-            </div>
+        </div>
         
     )
   }

@@ -1,6 +1,5 @@
 import Projects from "@/app/components/Projects";
 import Euro from "@/app/components/Euro";
-import ResidentAssistant from "@/app/components/ResidentAssistant";
 
 const Portfolio = () => {
   return (
@@ -14,7 +13,7 @@ const Portfolio = () => {
           <Projects />
         </div>
       </div>
-      <h1 className="text-4xl font-bold mb-4 pb-4 mt-4 pt-4">Work Experience 💻</h1>
+      <h1 className="text-4xl font-bold mb-4 pb-4 mt-4 pt-4">Work Experience</h1>
       <Euro />
     </div>
   );

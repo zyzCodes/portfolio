@@ -39,10 +39,6 @@ const Euro = () => {
                     <p className="text-sm md:text-base pb-1">• Supported a community of 3600+ university students trough leadership, coordination, and event planning,
                     fostering academic achievement, career success, diversity, and inclusivity.
                     </p>
-                    <p className="text-sm md:text-base">
-                        <span className="font-bold">Skills Acquired: </span>
-                        leadership, communication, problem-solving, networking, and time management.
-                    </p>
                 </div>
             </div>
         </div>

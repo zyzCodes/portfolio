@@ -61,7 +61,6 @@ const Projects = () => {
                             data on the runtime efficiency of each data structure.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     )

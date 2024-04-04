@@ -2,8 +2,8 @@ const Skills: React.FC = () => {
     // Define your skills in their respective categories with explicit types
     const languages: string[] = ["Python", "C", "C#", "C++", "JavaScript", "Julia"];
     const aiData: string[] = ["NumPy", "Pandas", "Plotly", "SPSS"];
-    const frontendDesign: string[] = ["HTML/CSS", "React.js", "Next.js", "Postman", "Figma", "Tailwind CSS", "REST APIs", "Bootstrap"];
-    const backendOther: string[] = ["Git", "Bitbucket", "Django", ".NET", "SQL", "NoSQL", "MongoDB", "Excel", "Word"];
+    const frontendDesign: string[] = ["HTML", "CSS", "React.js", "Next.js", "Postman", "Figma", "Tailwind CSS", "REST APIs", "Bootstrap"];
+    const backendOther: string[] = ["Git", "Bitbucket", "Django", ".NET", "SQL", "NoSQL", "MongoDB"];
 
     // Function to map skills to elements with a type for the skills parameter
     const renderSkillSet = (skills: string[]) => skills.map((skill, index) => (
