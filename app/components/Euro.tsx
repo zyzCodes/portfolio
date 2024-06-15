@@ -5,7 +5,7 @@ const Euro = () => {
                 <div className="w-full md:w-[800]">
                     <div className="flex flex-col md:flex-row justify-between items-center md:items-start pb-2">
                         <div>
-                            <h2 className="text-xl md:text-1xl font-bold">Eurotranciatura | Intern Software Developer</h2>
+                            <h2 className="text-xl md:text-1xl font-bold">Eurotranciatura | Software Developer Intern</h2>
                         </div>
                         <div className="mt-2 md:mt-0 md:text-right">
                             <p>Queretaro, Mexico | June 2022 - Aug 2022</p>
