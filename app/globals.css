@@ -38,6 +38,13 @@ body {
     blink-caret .75s step-end infinite;
 }
 
+
+/* Add this to your global CSS file or in a relevant CSS module */
+.hover\:shadow-glow-blue:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }

@@ -10,7 +10,7 @@ const Projects = () => {
             {/* Cards container */}
             <div className="flex flex-wrap justify-center gap-8">
                 {/* Card 1 */}
-                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative hover:translate-y-1">
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative hover:translate-y-1 hover:shadow-glow-blue">
                     <div className='image-container'>
                         <Image 
                         src="/FailureGraph.png" 
@@ -28,7 +28,7 @@ const Projects = () => {
 
                 {/* Card 2 */}
                 <Link href="https://www.esix.ca/" target="_blank">
-                    <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl hover:translate-y-1">
+                    <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl hover:translate-y-1 hover:shadow-glow-blue">
                         <div className='image-container'>
                             <Image 
                             src="/SubManager.png" 
@@ -46,7 +46,7 @@ const Projects = () => {
                 </Link>
 
                 {/* Card 3 */}
-                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl hover:translate-y-1">
+                <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl hover:translate-y-1 hover:shadow-glow-blue">
                     <div className='image-container'>
                         <Image 
                         src="/cprogram.png" 
