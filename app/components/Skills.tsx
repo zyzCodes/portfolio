@@ -1,5 +1,4 @@
 const Skills: React.FC = () => {
-    // Define your skills in their respective categories with explicit types
     const languages: string[] = ["Python", "C", "C#", "C++", "JavaScript", "Java"];
     const aiData: string[] = ["NumPy", "Pandas", "Plotly", "SPSS"];
     const frontendDesign: string[] = ["HTML", "CSS", "React.js", "Postman", "Figma", "Tailwind CSS", "REST APIs", "Bootstrap"];
