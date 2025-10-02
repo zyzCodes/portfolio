@@ -44,6 +44,13 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
 
 const projectsData: ProjectItem[] = [
     {
+        title: "DragonShell",
+        description: "A custom terminal emulator implemented using low-level Linux system calls for direct process management and I/O control",
+        technologies: "Built with C",
+        image: "/dragonshell.png",
+        link: "https://youtu.be/aajCXitSXhg"
+    },
+    {
         title: "Vehicle Telemetry System",
         description: "Real-time passenger counting system using image recognition and Kafka data pipeline.",
         technologies: "Built with Python, Django, PostgreSQL, and Kafka",
@@ -53,8 +60,7 @@ const projectsData: ProjectItem[] = [
         title: "Event Pooling Service",
         description: "Android mobile app for event creation and registration.",
         technologies: "Built with Java, Android Studio, and Firestore",
-        image:"/social-media-app.png",
-        link: "https://github.com/CMPUT301F24rabbit/carrot/tree/main/code"
+        image:"/social-media-app.png"
     },
     {
         title: "Euro Graph",
