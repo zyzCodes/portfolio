@@ -4,7 +4,7 @@ import Link from 'next/link'
 interface ProjectItem {
     title: string;
     description: string;
-    technologies: string;
+    technologies: string[];
     image?: string;
     link?: string;
 }
@@ -26,7 +26,16 @@ const ProjectCard = ({ project }: { project: ProjectItem }) => {
             <div className="card-body">
                 <h2 className="card-title text-sky-400">{project.title}</h2>
                 <p className='text-black'>{project.description}</p>
-                <p className='text-black'>{project.technologies}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                    {project.technologies.map((tech, index) => (
+                        <span 
+                            key={index}
+                            className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     );
@@ -46,32 +55,32 @@ const projectsData: ProjectItem[] = [
     {
         title: "DragonShell",
         description: "A custom terminal emulator implemented using low-level Linux system calls for direct process management and I/O control",
-        technologies: "Built with C",
+        technologies: ["C", "Linux"],
         image: "/dragonshell.png",
         link: "https://youtu.be/aajCXitSXhg"
     },
     {
         title: "Vehicle Telemetry System",
         description: "Real-time passenger counting system using image recognition and Kafka data pipeline.",
-        technologies: "Built with Python, Django, PostgreSQL, and Kafka",
+        technologies: ["Python", "Django", "PostgreSQL", "Kafka"],
         image: "/vehicleTelemetrySystem.jpg"
     },
     {
         title: "Event Pooling Service",
         description: "Android mobile app for event creation and registration.",
-        technologies: "Built with Java, Android Studio, and Firestore",
+        technologies: ["Java", "Android Studio", "Firestore"],
         image:"/social-media-app.png"
     },
     {
         title: "Euro Graph",
         description: "Dashboard application that queries data from MySQL database and displays the data in Dashboard.",
-        technologies: "Built with Python, Plotly, and MySQL",
+        technologies: ["Python", "Plotly", "MySQL"],
         image: "/FailureGraph.png"
     },
     {
         title: "SubManager",
         description: "Subscription Manager web application that reminds users about their upcoming bill subscriptions.",
-        technologies: "Built with React, MySQL, and Express.",
+        technologies: ["React", "MySQL", "Express"],
         image: "/SubManager.png",
         link: "https://www.esix.ca/"
     }

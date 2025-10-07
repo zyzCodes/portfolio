@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,42 +31,308 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.hamburger-btn {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
 
+.hamburger-btn:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: scale(1.05);
+}
+
+.hamburger-btn:active {
+  transform: scale(0.95);
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 18px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+  opacity: 1;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger-icon span:nth-child(3) {
+  bottom: 0;
+}
+
+/* Hamburger Animation - Keep as hamburger, just highlight when open */
+.hamburger-icon.open span:nth-child(1) {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  transform: scale(1.1);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Animation */
+.mobile-menu {
+  transform: translateY(-20px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mobile-menu.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Enhanced Menu Items */
+.mobile-menu li {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-menu li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.mobile-menu li:hover::before {
+  left: 100%;
+}
+
+.mobile-menu .nav-link {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 4px 8px;
+}
+
+.mobile-menu .nav-link:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  transform: translateX(8px);
+  color: #3b82f6;
+}
+
+/* Menu Item Icons */
+.mobile-menu .nav-link::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu .nav-link:hover::before {
+  transform: scale(1.5);
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+}
+
+/* Enhanced typewriter effect - Fixed for animation */
 .typewriter h1 {
   overflow: hidden;
-  border-right: .15em solid gray;
+  border-right: .15em solid white;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
+  line-height: 1.3;
+  padding: 0.1em 0;
   animation: 
     typing 4s steps(60, end) forwards, 
     blink-caret .75s step-end infinite 4s;
 }
 
+/* Gradient text with proper line height */
+.gradient-text {
+  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.3;
+  padding: 0.1em 0;
+}
 
-/* Add this to your global CSS file or in a relevant CSS module */
+/* Enhanced glow effect */
 .hover\:shadow-glow-blue:hover {
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.6),
+    0 0 40px rgba(59, 130, 246, 0.3),
+    0 0 60px rgba(59, 130, 246, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Modern CTA Button Styles */
+.modern-btn {
+  @apply px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-opacity-50;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
+.primary-btn {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:shadow-blue-500/25;
 }
 
-@media (max-width: 768px) {
-  .typewriter h1 {
-    font-size: 18px; /* Adjust the font size for smaller screens */
+.secondary-btn {
+  @apply bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm;
+}
+
+/* Parallax Effects */
+.parallax-bg {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Skills Animation */
+.skill-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-item:nth-child(4) { animation-delay: 0.4s; }
+.skill-item:nth-child(5) { animation-delay: 0.5s; }
+.skill-item:nth-child(6) { animation-delay: 0.6s; }
+.skill-item:nth-child(7) { animation-delay: 0.7s; }
+.skill-item:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Enhanced typing animation */
+@keyframes typing {
+  from { 
+    width: 0;
+    opacity: 0;
+  }
+  to { 
+    width: 100%;
+    opacity: 1;
+  }
+}
 
+/* Enhanced cursor animation - white cursor */
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent;
+  }
+  50% { 
+    border-color: white;
+  }
+}
 
+/* Smooth scroll offset for fixed navbar */
+.scroll-smooth {
+  scroll-padding-top: 80px;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .typewriter h1 {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    animation-duration: 2s;
+  }
+  
+  .modern-btn {
+    @apply px-6 py-3 text-base;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter h1 {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    animation-duration: 1.8s;
+  }
+  
+  .modern-btn {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+}

@@ -3,23 +3,38 @@ import Euro from "@/app/components/Euro";
 
 const Portfolio = () => {
   return (
-    <div className="flex flex-col items-center mx-16 my-16">
-      {/* Centered heading */}
-      <h1 className="text-4xl font-bold mb-4 pb-4 mt-4 pt-4">Work Experience</h1>
-      <Euro />
-      
-      <h1 className="text-4xl font-bold mb-4 pb-4 mt-4 pt-4">Projects</h1>
+    <div className="min-h-screen">
+      {/* Work Experience Section */}
+      <section className="py-16 px-4 md:px-16 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Work Experience
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          </div>
+          <Euro />
+        </div>
+      </section>
 
-      {/* Content (Projects and Work components) */}
-      <div className="flex justify-center">
-        <div className="">
+      {/* Projects Section */}
+      <section className="py-16 px-4 md:px-16 relative bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Featured Projects
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full"></div>
+            <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg max-w-2xl mx-auto">
+              A collection of projects that showcase my skills in software development, 
+              from low-level systems programming to full-stack web applications.
+            </p>
+          </div>
           <Projects />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
 
 export default Portfolio;
-
-
