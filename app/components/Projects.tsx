@@ -63,7 +63,8 @@ const projectsData: ProjectItem[] = [
         title: "Vehicle Telemetry System",
         description: "Real-time passenger counting system using image recognition and Kafka data pipeline.",
         technologies: ["Python", "Django", "PostgreSQL", "Kafka"],
-        image: "/vehicleTelemetrySystem.jpg"
+        image: "/vehicleTelemetrySystem.jpg",
+        link: "https://github.com/Ccolina03/LiveBusVolume"
     },
     {
         title: "Event Pooling Service",
