@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import mountains from "../../public/mountains.jpg";
+import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen relative overflow-hidden">
+    <div className="hero min-h-screen relative overflow-hidden my-4">
       {/* Background Image - No overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -26,14 +27,22 @@ const Hero = () => {
             />
           </div>
 
-          <div className="typewriter max-w-fit mb-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Hi there, I&apos;m Diego Arana
+          <div className="mb-4 w-full flex justify-center px-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold lg:text-5xl text-white md:min-w-[600px] text-center">
+              <TypewriterEffect
+                words={["Hello", "I'm Diego Arana"]}
+                typingSpeed={80}
+                deletingSpeed={50}
+                pauseDuration={1000}
+                cursorColor="#FFFFFF"
+                cursorWidth={4}
+                textColor="#FFFFFF"
+              />
             </h1>
           </div>
           
           <p className="py-2 text-white text-lg md:text-xl mb-2">
-            I&apos;m a fourth year computer science student at the University of Alberta.
+            A Fourth year computer science student at the University of Alberta.
           </p>
           <p className="pb-6 text-white text-lg md:text-xl mb-4">I like making ideas come to life!</p>
           
