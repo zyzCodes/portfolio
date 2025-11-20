@@ -25,15 +25,15 @@ const Navbar = () => {
                             <span></span>
                         </div>
                     </label>
-                    <ul 
-                        tabIndex={0} 
+                    <ul
+                        tabIndex={0}
                         className={`menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52 mobile-menu ${isMenuOpen ? 'open' : ''}`}
                     >
                         <li className="nav-link text-black">
                             <Link href="/" onClick={() => setIsMenuOpen(false)}>About</Link>
                         </li>
                         <li className="nav-link text-black">
-                            <Link href="mailto:aranasol@ualberta.ca" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                            <a href="mailto:aranasol@ualberta.ca" onClick={() => setIsMenuOpen(false)}>Contact</a>
                         </li>
                         <li className="nav-link text-black">
                             <Link href="portfolio/" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                         <Link href="/">About</Link>
                     </li>
                     <li className="nav-link">
-                        <Link href="mailto:aranasol@ualberta.ca">Contact</Link>
+                        <a href="mailto:aranasol@ualberta.ca">Contact</a>
                     </li>
                     <li className="nav-link">
                         <Link href="portfolio/">Portfolio</Link>
