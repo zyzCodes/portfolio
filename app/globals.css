@@ -205,7 +205,7 @@ body {
 }
 
 .primary-btn {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:shadow-blue-500/25;
+  @apply bg-gradient-to-r from-blue-600 to-sky-400 text-white shadow-lg hover:shadow-xl hover:shadow-blue-500/25;
 }
 
 .secondary-btn {
