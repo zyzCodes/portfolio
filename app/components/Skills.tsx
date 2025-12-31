@@ -23,13 +23,15 @@ const Skills: React.FC = () => {
             }
         );
 
-        if (skillsRef.current) {
-            observer.observe(skillsRef.current);
+        const currentRef = skillsRef.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (skillsRef.current) {
-                observer.unobserve(skillsRef.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);

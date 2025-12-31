@@ -1,17 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
-import mountains from "../../public/mountains.jpg";
+import banff from "../../public/banff.jpg";
 import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen relative overflow-hidden my-4">
+    <div className="hero min-h-screen relative overflow-hidden">
       {/* Background Image - No overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={mountains}
+          src={banff}
           alt="Hero Background"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
 
