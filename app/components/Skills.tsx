@@ -40,7 +40,7 @@ const Skills: React.FC = () => {
     const renderSkillSet = (skills: string[], startDelay: number = 0) => skills.map((skill, index) => (
         <div
             key={index}
-            className={`skill-item bg-gray-200 rounded-full px-4 py-2 m-1 text-sm md:text-base hover:bg-gray-300 transition-colors duration-300 ${isVisible ? 'animate' : ''}`}
+            className={`skill-item bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 m-1 text-sm md:text-base hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300 ${isVisible ? 'animate' : ''}`}
             style={{ animationDelay: `${startDelay + (index * 0.1)}s` }}
         >
             {skill}
@@ -52,7 +52,7 @@ const Skills: React.FC = () => {
             <div className="experience-container w-full md:w-[800px]">
                 {/* Languages Section */}
                 <div className="pb-4">
-                    <span className="font-bold text-sm md:text-base">Languages: </span>
+                    <span className="font-bold text-sm md:text-base text-gray-900 dark:text-white">Languages: </span>
                     <div className="flex flex-wrap justify-start items-center">
                         {renderSkillSet(languages, 0.1)}
                     </div>
@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
 
                 {/* AI/Data Section */}
                 <div className="pb-4">
-                    <span className="font-bold text-sm md:text-base">AI/Data: </span>
+                    <span className="font-bold text-sm md:text-base text-gray-900 dark:text-white">AI/Data: </span>
                     <div className="flex flex-wrap justify-start items-center">
                         {renderSkillSet(aiData, 0.8)}
                     </div>
@@ -68,7 +68,7 @@ const Skills: React.FC = () => {
 
                 {/* Frontend/Design Section */}
                 <div className="pb-4">
-                    <span className="font-bold text-sm md:text-base">Frontend/Design: </span>
+                    <span className="font-bold text-sm md:text-base text-gray-900 dark:text-white">Frontend/Design: </span>
                     <div className="flex flex-wrap justify-start items-center">
                         {renderSkillSet(frontendDesign, 1.2)}
                     </div>
@@ -76,7 +76,7 @@ const Skills: React.FC = () => {
 
                 {/* Backend/Other Section */}
                 <div className="pb-4">
-                    <span className="font-bold text-sm md:text-base">Backend/Other: </span>
+                    <span className="font-bold text-sm md:text-base text-gray-900 dark:text-white">Backend/Other: </span>
                     <div className="flex flex-wrap justify-start items-center">
                         {renderSkillSet(backendOther, 2.0)}
                     </div>

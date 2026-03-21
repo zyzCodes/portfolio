@@ -27,19 +27,22 @@ const Navbar = () => {
                     </label>
                     <ul
                         tabIndex={0}
-                        className={`menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52 mobile-menu ${isMenuOpen ? 'open' : ''}`}
+                        className={`menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-40 mobile-menu ${isMenuOpen ? 'open' : ''}`}
                     >
                         <li className="nav-link text-black">
                             <Link href="/" onClick={() => setIsMenuOpen(false)}>About</Link>
                         </li>
                         <li className="nav-link text-black">
-                            <a href="mailto:aranasol@ualberta.ca" onClick={() => setIsMenuOpen(false)}>Contact</a>
-                        </li>
-                        <li className="nav-link text-black">
-                            <Link href="portfolio/" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
+                            <Link href="/#experience" onClick={() => setIsMenuOpen(false)}>Experience</Link>
                         </li>
                         <li className="nav-link text-black">
                             <Link href="/#skills" onClick={() => setIsMenuOpen(false)}>Skills</Link>
+                        </li>
+                        <li className="nav-link text-black">
+                            <Link href="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+                        </li>
+                        <li className="nav-link text-black">
+                            <a href="mailto:aranasol@ualberta.ca" onClick={() => setIsMenuOpen(false)}>Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -51,13 +54,16 @@ const Navbar = () => {
                         <Link href="/">About</Link>
                     </li>
                     <li className="nav-link">
-                        <a href="mailto:aranasol@ualberta.ca">Contact</a>
-                    </li>
-                    <li className="nav-link">
-                        <Link href="portfolio/">Portfolio</Link>
+                        <Link href="/#experience">Experience</Link>
                     </li>
                     <li className="nav-link">
                         <Link href="/#skills">Skills</Link>
+                    </li>
+                    <li className="nav-link">
+                        <Link href="/#projects">Projects</Link>
+                    </li>
+                    <li className="nav-link">
+                        <a href="mailto:aranasol@ualberta.ca">Contact</a>
                     </li>
                 </ul>
             </div>

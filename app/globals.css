@@ -36,19 +36,7 @@ body {
   border: none;
   padding: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
   border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hamburger-btn:hover {
-  background-color: rgba(59, 130, 246, 0.1);
-  transform: scale(1.05);
-}
-
-.hamburger-btn:active {
-  transform: scale(0.95);
 }
 
 .hamburger-icon {
@@ -57,20 +45,16 @@ body {
   width: 24px;
   height: 18px;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger-icon span {
   display: block;
   height: 3px;
   width: 100%;
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  background: #3b82f6;
   border-radius: 2px;
-  opacity: 1;
   position: absolute;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .hamburger-icon span:nth-child(1) {
@@ -86,32 +70,31 @@ body {
   bottom: 0;
 }
 
-/* Hamburger Animation - Keep as hamburger, just highlight when open */
+/* X Animation */
 .hamburger-icon.open span:nth-child(1) {
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
-  transform: scale(1.1);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .hamburger-icon.open span:nth-child(2) {
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
-  transform: translateY(-50%) scale(1.1);
+  opacity: 0;
 }
 
 .hamburger-icon.open span:nth-child(3) {
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
-  transform: scale(1.1);
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 
 /* Mobile Menu Animation */
 .mobile-menu {
-  transform: translateY(-20px) scale(0.95);
+  transform: translateY(-20px);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   border: 1px solid rgba(59, 130, 246, 0.2);
-  box-shadow: 
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
@@ -119,68 +102,22 @@ body {
 }
 
 .mobile-menu.open {
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
 
-/* Enhanced Menu Items */
-.mobile-menu li {
-  position: relative;
-  overflow: hidden;
-}
-
-.mobile-menu li::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.mobile-menu li:hover::before {
-  left: 100%;
-}
-
+/* Menu Items */
 .mobile-menu .nav-link {
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease;
   font-weight: 500;
   padding: 12px 16px;
   border-radius: 8px;
   margin: 4px 8px;
 }
 
-.mobile-menu .nav-link:hover {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
-  transform: translateX(8px);
-  color: #3b82f6;
-}
-
-/* Menu Item Icons */
-.mobile-menu .nav-link::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-  border-radius: 50%;
-  margin-right: 12px;
-  transition: all 0.3s ease;
-}
-
-.mobile-menu .nav-link:hover::before {
-  transform: scale(1.5);
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
-}
-
 /* Gradient text with proper line height */
 .gradient-text {
-  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  background: linear-gradient(-45deg, #3b82f6, #06b6d4, #0ea5e9, #3b82f6);
   background-size: 400% 400%;
   animation: gradient-shift 3s ease infinite;
   -webkit-background-clip: text;
@@ -276,10 +213,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  background: #3b82f6;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  background: #2563eb;
 }
