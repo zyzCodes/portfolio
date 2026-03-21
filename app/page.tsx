@@ -41,10 +41,6 @@ export default function Home() {
               Featured Projects
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full"></div>
-            <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg max-w-2xl mx-auto">
-              A collection of projects that showcase my skills in software development,
-              from low-level systems programming to full-stack web applications.
-            </p>
           </div>
           <Projects />
         </div>
