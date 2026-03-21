@@ -107,7 +107,18 @@ body {
   visibility: visible;
 }
 
-/* Menu Items */
+/* Desktop Nav Links */
+.navbar-center .nav-link a {
+  color: #1f2937;
+  transition: color 0.2s ease;
+}
+
+.navbar-center .nav-link a:hover {
+  color: #f9fafb;
+  background: none !important;
+}
+
+/* Mobile Menu Items */
 .mobile-menu .nav-link {
   font-weight: 500;
   padding: 12px 16px;
