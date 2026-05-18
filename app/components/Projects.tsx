@@ -2,102 +2,108 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 interface ProjectItem {
-    title: string;
-    description: string;
-    technologies: string[];
-    image?: string;
-    link?: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  image?: string;
+  link?: string;
 }
 
 const ProjectCard = ({ project }: { project: ProjectItem }) => {
-    const CardContent = (
-        <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative hover:translate-y-1 hover:shadow-glow-blue">
-            {project.image && (
-                <div className='image-container'>
-                    <Image 
-                        src={project.image} 
-                        alt={`${project.title} screenshot`}
-                        width={1000} 
-                        height={1000} 
-                        className='rounded-t-md'
-                    />
-                </div>
-            )}
-            <div className="card-body">
-                <h2 className="card-title text-sky-400">{project.title}</h2>
-                <p className='text-black'>{project.description}</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                    {project.technologies.map((tech, index) => (
-                        <span 
-                            key={index}
-                            className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
-                        >
-                            {tech}
-                        </span>
-                    ))}
-                </div>
-            </div>
+  const CardContent = (
+    <div className="card card-compact w-[400px] h-[450px] bg-base-100 shadow-xl relative hover:translate-y-1 hover:shadow-glow-blue">
+      {project.image && (
+        <div className='image-container'>
+          <Image
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            width={1000}
+            height={1000}
+            className='rounded-t-md'
+          />
         </div>
+      )}
+      <div className="card-body">
+        <h2 className="card-title text-sky-400">{project.title}</h2>
+        <p className='text-black'>{project.description}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  if (project.link) {
+    return (
+      <Link href={project.link} target="_blank">
+        {CardContent}
+      </Link>
     );
+  }
 
-    if (project.link) {
-        return (
-            <Link href={project.link} target="_blank">
-                {CardContent}
-            </Link>
-        );
-    }
-
-    return CardContent;
+  return CardContent;
 };
 
 const projectsData: ProjectItem[] = [
-    {
-        title: "DragonShell",
-        description: "A custom terminal emulator implemented using low-level Linux system calls for direct process management and I/O control",
-        technologies: ["C", "Linux"],
-        image: "/dragonshell.png",
-        link: "https://youtu.be/aajCXitSXhg"
-    },
-    {
-        title: "Vehicle Telemetry System",
-        description: "Real-time passenger counting system using image recognition and Kafka data pipeline.",
-        technologies: ["Python", "Django", "PostgreSQL", "Kafka"],
-        image: "/vehicleTelemetrySystem.jpg",
-        link: "https://github.com/Ccolina03/LiveBusVolume"
-    },
-    {
-        title: "Event Pooling Service",
-        description: "Android mobile app for event creation and registration.",
-        technologies: ["Java", "Android Studio", "Firestore"],
-        image:"/social-media-app.png"
-    },
-    {
-        title: "Euro Graph",
-        description: "Dashboard application that queries data from MySQL database and displays the data in Dashboard.",
-        technologies: ["Python", "Plotly", "MySQL"],
-        image: "/FailureGraph.png"
-    },
-    {
-        title: "SubManager",
-        description: "Subscription Manager web application that reminds users about their upcoming bill subscriptions.",
-        technologies: ["React", "MySQL", "Express"],
-        image: "/SubManager.png",
-        link: "https://www.esix.ca/"
-    }
+  {
+    title: "Glass",
+    description: "Production database sandboxing tool that lets developers instantly clone PostgreSQL databases and safely let AI agents loose in isolated, production-like environments.",
+    technologies: ["Go"],
+    image: "/glass-logo.png"
+  },
+  {
+    title: "DragonShell",
+    description: "A custom terminal emulator implemented using low-level Linux system calls for direct process management and I/O control",
+    technologies: ["C", "Linux"],
+    image: "/dragonshell.png",
+    link: "https://youtu.be/aajCXitSXhg"
+  },
+  {
+    title: "Vehicle Telemetry System",
+    description: "Real-time passenger counting system using image recognition and Kafka data pipeline.",
+    technologies: ["Python", "Django", "PostgreSQL", "Kafka"],
+    image: "/vehicleTelemetrySystem.jpg",
+    link: "https://github.com/Ccolina03/LiveBusVolume"
+  },
+  {
+    title: "Event Pooling Service",
+    description: "Android mobile app for event creation and registration.",
+    technologies: ["Java", "Android Studio", "Firestore"],
+    image: "/social-media-app.png"
+  },
+  {
+    title: "Euro Graph",
+    description: "Dashboard application that queries data from MySQL database and displays the data in Dashboard.",
+    technologies: ["Python", "Plotly", "MySQL"],
+    image: "/FailureGraph.png"
+  },
+  {
+    title: "SubManager",
+    description: "Subscription Manager web application that reminds users about their upcoming bill subscriptions.",
+    technologies: ["React", "MySQL", "Express"],
+    image: "/SubManager.png",
+    link: "https://www.esix.ca/"
+  }
 ];
 
 const Projects = () => {
-    return (
-        <div className='pb-24'>
-            {/* Cards container */}
-            <div className="flex flex-wrap justify-center gap-8">
-                {projectsData.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div className='pb-24'>
+      {/* Cards container */}
+      <div className="flex flex-wrap justify-center gap-8">
+        {projectsData.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Projects;
