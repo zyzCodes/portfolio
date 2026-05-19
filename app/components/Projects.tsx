@@ -56,7 +56,8 @@ const projectsData: ProjectItem[] = [
     title: "Glass",
     description: "Production database sandboxing tool that lets developers instantly clone PostgreSQL databases and safely let AI agents loose in isolated, production-like environments.",
     technologies: ["Go"],
-    image: "/glass-logo.png"
+    image: "/glass-logo.png",
+    link: "https://glass-website-ten.vercel.app/"
   },
   {
     title: "DragonShell",
